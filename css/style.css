@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Fredoka+One&family=Fugaz+One&family=Kanit:wght@500&family=Neuton&family=Open+Sans:wght@600;700&family=Raleway:wght@500&family=Righteous&family=Rubik:wght@500&family=Staatliches&display=swap');
+ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*fuente para la pag*/
+
+body{
+    font-family: 'Raleway', sans-serif;
+    background-image: url("../assets/cielo-gris.jpg");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+}
+
+/*formato del header*/
+header{
+    background-color: #0a141d;
+}
+.menu{
+    
+    height: 100px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.logo{
+    height: 100px;
+    display: flex;
+    width: 200px;
+}
+
+.menu-items{
+    display: flex;
+    list-style: none;
+    margin-right: 30px;
+}
+
+.menu-items li{
+    border-radius: 3px;
+    margin: 0 5px;
+}
+
+.menu-items li a{
+    padding: 7px 3px;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.menu-items li:hover{
+    background-color: #0d2033;
+    color: blue;
+    transition: .4s;
+    border-radius: 5%;
+}
+
+.btn-menu{
+    margin-right: 30px;
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+
+.submenu{
+    display: none;
+}
+
+.submenuUnhide{
+    margin-top: 9vh;
+    margin-left: 6vh;
+
+    display: block;
+    position: absolute;
+    color: #fff;
+    z-index: 1000;
+}
+
+.submenuUnhide-Planets{
+    margin-top: 7vh;
+    margin-left: 6vh;
+    background-color: #0a141d;
+    display: block;
+    position: absolute;
+    color: #fff;
+    z-index: 1000;
+}
+
+.iconos{
+    display: none;
+}
+
+.iconos i{
+    font-size: 25px;
+    color: #fff;
+}
+
+@media (max-width: 952px){
+    .menu-items li a{
+        font-size: 16px;
+    }
+
+    .logo{
+        padding-left: 35px;
+    }
+}
+
+@media (max-width: 858px){
+    .menu{
+        height: 65px;
+    }
+
+    .btn-menu{
+        display: inline-flex;
+    }
+
+    .menu-items{
+        
+        position: fixed;
+        width: 100%;
+        height: calc(100% - 65px);
+        background: #414141;
+        top: -100vh;
+        display: block;
+        text-align: center;
+        transition: all .4s;
+        flex-direction: column;
+    }
+    .logo{
+        padding-left: 35px;
+        height: 65px;
+    }
+
+    .iconos{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .iconos i{
+        padding: 0 10px;
+    }
+
+    .submenuUnhide{
+    margin-top: 9vh;
+    margin-left: 6vh;
+    display: block;
+    position: absolute;
+    color: #fff;
+    z-index: 1000;
+}
+}
+
+
+html,body{
+    height: 100%;
+}
+
+/* formato footer */
+
+.pie-pagina{
+    width: 100%;
+    background-color: #0a141d;
+    
+}
+
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-pagina .grupo-1 .box figure img{
+    width: 250px;
+}
+
+.pie-pagina .grupo-1 .box h2{
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.pie-pagina .grupo-1 .box .integrantes {
+    text-decoration: none;
+    color: rgb(255, 132, 0);
+    display: flex;
+    margin:20px;
+}
+
+.pie-pagina .grupo-1 .box p{
+    color: #efefef;
+    margin-bottom: 30px;
+}
+
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align:center;
+    transition: all 300ms ease;
+}
+
+.pie-pagina .grupo-1 .box a:hover{
+    color: aqua;
+}
+
+.pie-pagina .grupo-2{
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color:#fff;
+}
+
+.pie-pagina .grupo-2 small{
+    
+    font-size: 15px;
+}
+
+@media screen and (max-width:800px){
+    .pie-pagina .grupo-1{
+        width: 80%;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+}
+
+/*Contenedor donde esta el titulo y las cards*/
+.ContenedorPlanetas{
+    height: 100%;
+ 
+    background-image: url("../assets/fondocards.gif");
+   
+}
+
+/*Titulo de las cards*/
+.tituloPlanetas{
+    text-align: center;
+    padding-top: 40px;
+    margin-top: 0px;
+    font-size: 40px;
+    color: antiquewhite;
+    line-height: 1.6;
+}
+/* Contenedor de las Cards */
+.contCard{
+    width: 100%;
+    max-width: 1200px;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin:auto;
+}
+/*Modificaciones de las cards*/
+.contCard .card{
+    width: 330px;
+    height: 430px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin:60px;
+    text-align: center;
+    transition: all 0.25s;
+    background-color: #fff;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.987);
+}
+ /* movimineto de la card*/
+.contCard .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 7px 7px 7px 7px rgba(0, 229, 255, 0.398);
+}
+/*imagen de la card*/
+.contCard .card img{
+    padding: 10px;
+    margin-left: 65px;
+    width: 200px;
+    height: 200px;
+}
+/*Titulo de la card*/
+.contCard .card h4{
+    font-size: 25px;
+    margin: 10px;
+}
+/*Texto de la card*/
+.contCard .card p{
+    padding: 30px 1rem;
+    font-size: 16px;
+    font-weight: 300;
+}
+/*Link de la card*/
+.contCard .card a{
+    font-weight: 500;
+    text-decoration: none;
+    color: #3498db;
+    
+}
+
+
+@media screen and (max-width:800px){
+    .contCard .card img{
+        
+        margin-left: 25px;
+        
+        
+    }
+}
+
+ /* formato del login */
+ .mainLogin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-image: url("../assets/galaxia.gif");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+
+}
+
+.login-box {
+    margin-top: 50px;
+    opacity: .9;
+    width: 320px;
+    height: 400px;
+    background-color: #001845;
+    color: #fff;
+    top: 0;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 50%);
+    box-sizing: border-box;
+    padding: 70px 30px; 
+    border-radius: 10%;  
+}
+    
+.login-box .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px); 
+    object-position: 50%;   
+    background-color: #fff;
+}
+
+.login-box h1 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;  
+}
+
+.login-box label {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+}
+
+.login-box input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.login-box input[type= "text"],
+.login-box input[type= "password"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+}
+
+::placeholder {
+    color: rgb(218, 216, 216);
+    font-size: 1em;
+}
+/* .login-box input{ */
+    .btn-secondary{
+    border: none;
+    border: 2px solid #fff;
+    background:rgb(30, 32, 39);
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 10px;
+    width: 100%;
+}
+.login-box a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: rgb(170, 165, 165);
+}
+
+.login-box a:hover{
+    color: #fff
+}
+
